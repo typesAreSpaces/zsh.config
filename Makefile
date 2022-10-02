@@ -1,2 +1,2 @@
 link:
-	ln -s .zshrc $HOME/.zshrc
+	ln -s ${PWD}/.zshrc ${HOME}/.zshrc
