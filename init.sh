@@ -15,6 +15,8 @@ ACTIVE_PROJECTS+=( ["$GITHUB_PROJECTS_DIR/QuickTex"]="$GITHUB_ACCOUNT_URL/QuickT
 ACTIVE_PROJECTS+=( ["$GITHUB_PROJECTS_DIR/starter-hugo-academic"]="$GITHUB_ACCOUNT_URL/starter-hugo-academic" )
 ACTIVE_PROJECTS+=( ["$GITHUB_PROJECTS_DIR/cv"]="$GITHUB_ACCOUNT_URL/cv" )
 ACTIVE_PROJECTS+=( ["$PHD_THESIS_DIR/Documents/Semesters/Fall/2022/TA-CS-241/Assignments"]="$GITHUB_ACCOUNT_URL/cs-241-grading" )
+ACTIVE_PROJECTS+=( ["$PHD_THESIS_DIR/Documents/Side-Projects/MaxDiff/Software/AXDInterpolator"]="$GITHUB_ACCOUNT_URL/AXDInterpolator" )
+ACTIVE_PROJECTS+=( ["$PHD_THESIS_DIR/Documents/Side-Projects/MaxDiff"]="$GITHUB_ACCOUNT_URL/caxd-T-_project" )
 LOCAL_ZSH_SCRIPTS=(\
   "$ZSH_SCRIPT_DIR/system.sh" \
   "$ZSH_SCRIPT_DIR/util.sh" \
