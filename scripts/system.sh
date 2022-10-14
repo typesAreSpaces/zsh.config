@@ -1,10 +1,15 @@
-update(){
-  for project in ${ACTIVE_PROJECTS[@]}; do
-    echo "Updating project: $project"
+updateActiveProjects(){
+  for project url in ${(kv)ACTIVE_PROJECTS}; do
+    echo ">>> Updating project: $project"
+    [ ! -d $project ] && git clone $url $project
     pushd $project
     git pull
     popd
   done
+}
+update(){
+  echo ">>> Update local projects"
+  updateActiveProjects
   echo ">>> Update software"
   brew update && brew upgrade
   echo ">>> Update emacs packages"
