@@ -33,7 +33,3 @@ restore(){
     mv $1 /home/$SHARED_LOCAL_DIR
   fi
 }
-
-time_machine(){
-  sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/jose/USBs/*"} /media/current_time_machine_vault
-}
