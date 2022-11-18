@@ -1,6 +1,6 @@
 #zmodload zsh/zprof
 # ZSHRC config
-#export TERM=xterm-256color
+export TERM=xterm-256color
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export GPG_TTY="$TTY"
