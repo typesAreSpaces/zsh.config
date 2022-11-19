@@ -40,3 +40,23 @@ updateBrewPackages(){
 installBrewPackages(){ 
   brew bundle
 }
+
+e(){
+  emacs --with-profile=$1 ${@:2}
+}
+et(){
+  emacsclient -t -s $1 -a emacs ${@:2}
+}
+ec(){
+  emacsclient -c -s $1 -a emacs ${@:2}
+}
+ne(){
+  emacs --with-profile=$1 --daemon &
+}
+ke(){
+  emacsclient -s $1 -a emacs -e "(kill-emacs)"
+}
+re(){
+  ke $1
+  ne $1
+}
