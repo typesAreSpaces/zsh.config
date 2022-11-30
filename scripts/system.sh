@@ -46,7 +46,7 @@ cdclip(){
 }
 
 updateArchPackages(){ 
-  pacman -Qqe | grep -v "$(pacman -Qqm)" > .arch_packages
+  pacman -Qqe > .arch_packages
 }
 installArchPackages(){ 
   cat .arch_packages | xargs pacman -S --needed --noconfirm
