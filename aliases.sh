@@ -20,6 +20,7 @@ alias scc="cd $PHD_THESIS_DIR/Documents/Side-Projects/kapur-nsf-proposal"
 alias maxdiff="cd $PHD_THESIS_DIR/Documents/Side-Projects/MaxDiff"
 
 # Program aliases
+alias python=/usr/bin/python3
 alias ocaml="rlwrap ocaml"
 alias wolfram="rlwrap wolfram"
 alias m2="M2 --script"
