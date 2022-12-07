@@ -33,7 +33,8 @@ for SCRIPT in ${LOCAL_ZSH_SCRIPTS[@]}; do
   [ -f $SCRIPT ] && source $SCRIPT
 done
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+#eval "$(/opt/homebrew/bin/brew shellenv)"
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+~/.config/base16-shell/scripts/base16-gruvbox-dark-hard.sh
