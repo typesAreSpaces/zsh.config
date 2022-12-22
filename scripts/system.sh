@@ -46,10 +46,10 @@ cdclip(){
 }
 
 updateArchPackages(){ 
-  sudo pacman -Qqe > .arch_packages
+  pacman -Qqe > .arch_packages
 }
 installArchPackages(){ 
-  paru -S --needed - < .arch_packages 
+  cat .arch_packages | xargs pacman -S --needed --noconfirm
 }
 
 tns(){
