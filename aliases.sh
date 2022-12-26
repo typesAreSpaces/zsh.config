@@ -39,6 +39,7 @@ alias singular="Singular"
 alias mozilla="firefox"
 alias printd="quick_attachment.py 249wdmk85qktm@hpeprint.com "
 alias s="sxiv"
+alias tlmgr="/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode"
 
 # Docker aliases
 alias seahorn="systemctl start docker && sudo docker run -v $(pwd):/host -it seahorn/seahorn-llvm5"
