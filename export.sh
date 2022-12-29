@@ -4,7 +4,7 @@ export TERM=xterm-256color
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export GPG_TTY="$TTY"
-export PNPM_HOME="/home/jose/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export HISTIGNORE='*sudo -S*'
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_PLUGINS='/opt/homebrew/Cellar'
