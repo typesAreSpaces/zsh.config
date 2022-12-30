@@ -35,5 +35,5 @@ restore(){
 }
 
 time_machine(){
-  sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/jose/USBs/*"} /media/current_time_machine_vault
+  sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","$HOME/USBs/*"} /media/current_time_machine_vault
 }
