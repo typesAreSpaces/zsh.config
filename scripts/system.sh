@@ -13,7 +13,9 @@ update(){
   echo ">>> Update software"
   brew update && brew upgrade
   echo ">>> Update emacs packages"
-  #todo
+  emacsclient -s jose -a emacs -e "(auto-package-update-now)"
+  emacsclient -s jose -a emacs -e "(straight-pull-all)"
+  emacsclient -s jose -a emacs -e "(straight-rebuild-all)"
   echo ">>> Update neovim packages"
   nvim --headless +TSUpdateSync +qa
   nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
