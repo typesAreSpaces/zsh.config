@@ -15,7 +15,7 @@ update(){
   echo ">>> Update software"
   paru;
   echo ">>> Update emacs packages"
-  emacsclient -s jose -a emacs -e "(auto-package-update-now)"
+  emacsclient -s jose -a emacs -e "(auto-package-update-now-async)"
   emacsclient -s jose -a emacs -e "(straight-pull-all)"
   emacsclient -s jose -a emacs -e "(straight-rebuild-all)"
   echo ">>> Update neovim packages"
@@ -68,6 +68,9 @@ et(){
 }
 ec(){
   emacsclient -c -s $1 -a emacs ${@:2}
+}
+ecp(){
+  emacsclient -c -s $1 -a emacs -e "(persp-state-load \"~/.config/jose-emacs/.emacs-session\")" ${@:2}
 }
 ne(){
   emacs --with-profile=$1 --daemon &
