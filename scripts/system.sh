@@ -70,7 +70,7 @@ ec(){
   emacsclient -c -s $1 -a emacs ${@:2}
 }
 ecp(){
-  emacsclient -c -s $2 -a emacs -e "(persp-state-load \"$1\")" ${@:3}
+  emacsclient -c -s $1 -a emacs -e "(persp-state-load \"$2\")" ${@:3}
 }
 ne(){
   emacs --with-profile=$1 --daemon &
