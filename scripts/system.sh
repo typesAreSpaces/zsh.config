@@ -56,7 +56,7 @@ ecp(){
   emacsclient -c -s $1 -a emacs -e "(persp-state-load \"$2\")" ${@:3}
 }
 ecs357(){
-  emacs --quick -l "~/Documents/GithubProjects/phd-thesis/Documents/Semesters/2023/Spring/TA-CS-357/cs357-ta-materials/resources/basic_configuration/cs-357.el" ${@:1}
+  emacs --quick -l "~/Documents/GithubProjects/phd-thesis/Documents/Semesters/2023/Spring/TA-CS-357/Extra/basic_configuration/cs-357-linux.el" ${@:1}
 }
 ne(){
   emacs --with-profile=$1 --daemon &
