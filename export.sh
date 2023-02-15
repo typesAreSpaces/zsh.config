@@ -12,6 +12,7 @@ export DISABLE_AUTO_UPDATE=true
 export GTK_PATH='/usr/lib/gtk-2.0'
 export _JAVA_AWT_WM_NONREPARENTING=1
 export POWERLEVEL9K_INSTANT_PROMPT=quiet
+export HOMEBREW_NO_INSTALL_FROM_API=1 
 
 export APPS_DIR="$HOME/Documents/Apps"
 export EMACS_DIR="$HOME/.config/jose-emacs"
