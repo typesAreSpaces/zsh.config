@@ -2,6 +2,7 @@
 # ZSHRC config
 #export TERM=xterm-256color
 
+export EDITOR="/usr/bin/nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 export GPG_TTY="$TTY"
 export PNPM_HOME="$HOME/.local/share/pnpm"
