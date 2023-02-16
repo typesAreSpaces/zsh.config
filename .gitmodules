@@ -1,0 +1,3 @@
+[submodule ".oh-my-zsh/custom/plugins/forgit"]
+	path = .oh-my-zsh/custom/plugins/forgit
+	url = git@github.com:typesAreSpaces/forgit.git

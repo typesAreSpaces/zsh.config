@@ -2,12 +2,14 @@
 # ZSHRC config
 export TERM=xterm-256color
 
+export EDITOR="/opt/homebrew/bin/nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 export GPG_TTY="$TTY"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export HISTIGNORE='*sudo -S*'
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_PLUGINS='/opt/homebrew/Cellar'
+export ZSH_PLUGINS="/opt/homebrew/Cellar"
+export ZSH_CUSTOM_PLUGINS="$ZSH/custom/plugins"
 export DISABLE_AUTO_UPDATE=true
 export GTK_PATH='/usr/lib/gtk-2.0'
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -60,3 +62,7 @@ export PATH="$APPS_DIR/csdp6.2.0linuxx86_64/bin:$PATH"
 export PATH="$GITHUB_PROJECTS_DIR/M2/M2:$PATH"
 export PATH="/usr/local/opt/cyrus-sasl/sbin:$PATH"
 export PATH="/Applications/Racket v8.7/bin:$PATH"
+export PATH="$GITHUB_PROJECTS_DIR/Singular4/bin:$PATH"
+export PATH="$GITHUB_PROJECTS_DIR/sdpa-gmp:$PATH"
+export PATH="$PNPM_HOME:$PATH"
+export PATH="$ZSH_CUSTOM_PLUGINS/forgit/bin:$PATH"
