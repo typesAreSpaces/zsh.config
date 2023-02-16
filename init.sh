@@ -6,6 +6,7 @@ TO_SOURCE=(\
   "$HOME/.fzf.zsh" \
   "$ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" \
   "$ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh" \
+  "$ZSH_CUSTOM_PLUGINS/fzf-tab/fzf-tab.plugin.zsh" \
 )
 declare -A ACTIVE_PROJECTS
 ACTIVE_PROJECTS=( )
