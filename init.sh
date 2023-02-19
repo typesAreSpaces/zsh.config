@@ -41,3 +41,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 # Use chmod +X to enable the theme
 ~/.config/base16-shell/scripts/base16-gruvbox-dark-hard.sh
+# opam configuration
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
