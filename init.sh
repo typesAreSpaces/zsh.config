@@ -40,3 +40,5 @@ done
 
 # opam configuration
 [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
