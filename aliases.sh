@@ -18,6 +18,7 @@ alias seminar="cd $SEMINAR"
 alias website="cd $WEBSITE_DIR"
 alias scc="cd $PHD_THESIS_DIR/Documents/Side-Projects/kapur-nsf-proposal"
 alias maxdiff="cd $PHD_THESIS_DIR/Documents/Side-Projects/MaxDiff"
+alias axdint="cd $GITHUB_PROJECTS_DIR/AXDInterpolator"
 
 # Program aliases
 alias python=/usr/bin/python3
