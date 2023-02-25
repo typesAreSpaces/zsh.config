@@ -11,7 +11,7 @@ update(){
   echo ">>> Update local projects"
   updateActiveProjects
   echo ">>> Update software"
-  brew update && brew upgrade
+  brew update && arch --arm64 brew upgrade
   echo ">>> Update emacs packages"
   emacsclient -s jose -a emacs -e "(auto-package-update-now-async)"
   emacsclient -s jose -a emacs -e "(straight-pull-all)"
