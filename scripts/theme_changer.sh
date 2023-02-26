@@ -29,12 +29,13 @@ polybarThemeSwitch(){
       sed -i "s|^border-color.*|border-color = #7aa2f7|g" $config_file
       ;;
   esac
+  kilall launch.sh
   $HOME/.config/polybar/launch.sh &
 }
 wallpaperThemeSwitch(){
   case $1 in
     "gruvbox")
-      sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/mountains.jpg|g" $2
+      sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/gruv-4.jpg|g" $2
       ;;
     "nord")
       sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/minimal_mountains.png|g" $2
@@ -61,16 +62,16 @@ nvimThemeSwitch(){
 emacsThemeSwitch(){
   case $1 in
     "gruvbox")
-      sed -i "s/(load-theme.*/(load-theme 'doom-gruvbox t))/g" $EMACS_DIR/config.org
-      sed -i "s/(load-theme.*/(load-theme 'doom-gruvbox t))/g" $EMACS_DIR/init.el
+      sed -i "s/(load-theme '.*/(load-theme 'doom-gruvbox t))/g" $EMACS_DIR/config.org
+      sed -i "s/(load-theme '.*/(load-theme 'doom-gruvbox t))/g" $EMACS_DIR/init.el
       ;;
     "nord")
-      sed -i "s/(load-theme.*/(load-theme 'doom-nord t))/g" $EMACS_DIR/config.org
-      sed -i "s/(load-theme.*/(load-theme 'doom-nord t))/g" $EMACS_DIR/init.el
+      sed -i "s/(load-theme '.*/(load-theme 'doom-nord t))/g" $EMACS_DIR/config.org
+      sed -i "s/(load-theme '.*/(load-theme 'doom-nord t))/g" $EMACS_DIR/init.el
       ;;
     "tokyo")
-      sed -i "s/(load-theme.*/(load-theme 'doom-palenight t))/g" $EMACS_DIR/config.org
-      sed -i "s/(load-theme.*/(load-theme 'doom-palenight t))/g" $EMACS_DIR/init.el
+      sed -i "s/(load-theme '.*/(load-theme 'doom-tokyo-night t))/g" $EMACS_DIR/config.org
+      sed -i "s/(load-theme '.*/(load-theme 'doom-tokyo-night t))/g" $EMACS_DIR/init.el
       ;;
   esac
   emacsclient -s $EMACS_PROFILE -a emacs -e "(kill-emacs)"; 
@@ -95,6 +96,7 @@ zathuraThemeSwitch(){
 }
 
 changeTheme(){
+  current_keyboard_layout=$(cat "$HOME/.current_binding" | xargs)
   alacrittyThemeSwitch $2
   polybarThemeSwitch $2
   nvimThemeSwitch $2
@@ -113,4 +115,7 @@ changeTheme(){
       ;;
   esac 
   echo "Theme has changed to " $2 " for " $1
+  ## TODO: Fix this, it's not waiting until
+  ## previous script changes the keyboard layout
+  changeKBD "$current_keyboard_layout"
 }
