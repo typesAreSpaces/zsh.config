@@ -96,7 +96,6 @@ zathuraThemeSwitch(){
 }
 
 changeTheme(){
-  current_keyboard_layout=$(cat "$HOME/.current_binding" | xargs)
   alacrittyThemeSwitch $2
   polybarThemeSwitch $2
   nvimThemeSwitch $2
@@ -117,5 +116,4 @@ changeTheme(){
   echo "Theme has changed to " $2 " for " $1
   ## TODO: Fix this, it's not waiting until
   ## previous script changes the keyboard layout
-  changeKBD "$current_keyboard_layout"
 }
