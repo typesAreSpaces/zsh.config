@@ -41,7 +41,7 @@ wallpaperThemeSwitch(){
       sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/minimal_mountains.png|g" $2
       ;;
     "tokyo")
-      sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/bridge_and_sunset.png|g" $2
+      sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/tokyo_night.jpg|g" $2
       ;;
   esac
 }
