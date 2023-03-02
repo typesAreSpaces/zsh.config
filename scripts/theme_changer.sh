@@ -33,13 +33,13 @@ polybarThemeSwitch(){
 wallpaperThemeSwitch(){
   case $1 in
     "gruvbox")
-      sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/mountains.jpg|g" $2
+      sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/gruv-4.jpg|g" $2
       ;;
     "nord")
       sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/minimal_mountains.png|g" $2
       ;;
     "tokyo")
-      sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/city_night_city_coast_179489_3840x2160.jpg|g" $2
+      sed -i "s|$WALLPAPERS_DIR/.*|$WALLPAPERS_DIR/tokyo_night.jpg|g" $2
       ;;
   esac
 }
@@ -61,16 +61,16 @@ emacsThemeSwitch(){
   emacs_dir=$HOME/.emacs.d
   case $1 in
     "gruvbox")
-      sed -i "s/(load-theme.*/(load-theme 'doom-gruvbox t))/g" $emacs_dir/Emacs.org
-      sed -i "s/(load-theme.*/(load-theme 'doom-gruvbox t))/g" $emacs_dir/init.el
+      sed -i "s/(load-theme '.*/(load-theme 'doom-gruvbox t))/g" $EMACS_DIR/config.org
+      sed -i "s/(load-theme '.*/(load-theme 'doom-gruvbox t))/g" $EMACS_DIR/init.el
       ;;
     "nord")
-      sed -i "s/(load-theme.*/(load-theme 'doom-nord t))/g" $emacs_dir/Emacs.org
-      sed -i "s/(load-theme.*/(load-theme 'doom-nord t))/g" $emacs_dir/init.el
+      sed -i "s/(load-theme '.*/(load-theme 'doom-nord t))/g" $EMACS_DIR/config.org
+      sed -i "s/(load-theme '.*/(load-theme 'doom-nord t))/g" $EMACS_DIR/init.el
       ;;
     "tokyo")
-      sed -i "s/(load-theme.*/(load-theme 'doom-palenight t))/g" $emacs_dir/Emacs.org
-      sed -i "s/(load-theme.*/(load-theme 'doom-palenight t))/g" $emacs_dir/init.el
+      sed -i "s/(load-theme '.*/(load-theme 'doom-tokyo-night t))/g" $EMACS_DIR/config.org
+      sed -i "s/(load-theme '.*/(load-theme 'doom-tokyo-night t))/g" $EMACS_DIR/init.el
       ;;
   esac
 }
@@ -121,4 +121,6 @@ changeTheme(){
       ;;
   esac 
   echo "Theme has changed to " $2 " for " $1
+  ## TODO: Fix this, it's not waiting until
+  ## previous script changes the keyboard layout
 }
