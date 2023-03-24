@@ -14,8 +14,8 @@ update(){
   updateMachine.sh;
   echo ">>> Update software"
   paru;
-  echo ">>> Update emacs packages"
-  emacsclient -s jose -a emacs -e "(auto-package-update-now-async)"
+  #echo ">>> Update emacs packages"
+  #emacsclient -s jose -a emacs -e "(auto-package-update-now-async)"
   #emacsclient -s jose -a emacs -e "(straight-pull-all)"
   #emacsclient -s jose -a emacs -e "(straight-rebuild-all)"
   echo ">>> Update neovim packages"
