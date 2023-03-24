@@ -1,3 +1,12 @@
+updateEmacs(){
+  emacsclient -s jose -a emacs -e "(auto-package-update-now-async)"
+  emacsclient -s jose -a emacs -e "(straight-pull-all)"
+  emacsclient -s jose -a emacs -e "(straight-rebuild-all)"
+}
+updateNvim(){
+  nvim --headless +TSUpdateSync +qa;
+  nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync';
+}
 updateActiveProjects(){
   for project url in ${(kv)ACTIVE_PROJECTS}; do
     echo ">>> Updating project: $project"
@@ -15,12 +24,9 @@ update(){
   echo ">>> Update software"
   paru;
   #echo ">>> Update emacs packages"
-  #emacsclient -s jose -a emacs -e "(auto-package-update-now-async)"
-  #emacsclient -s jose -a emacs -e "(straight-pull-all)"
-  #emacsclient -s jose -a emacs -e "(straight-rebuild-all)"
+  #updateEmacs 
   echo ">>> Update neovim packages"
-  nvim --headless +TSUpdateSync +qa;
-  nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync';
+  updateNvim
   echo ">>> Update Latex macros"
   [ -d $LATEX_MACROS_DIR ] && make -C $LATEX_MACROS_DIR
 }
