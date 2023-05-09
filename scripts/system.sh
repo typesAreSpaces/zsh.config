@@ -22,7 +22,7 @@ update(){
   echo ">>> Update config"
   updateMachine.sh;
   echo ">>> Update software"
-  paru;
+  ame upg;
   #echo ">>> Update emacs packages"
   #updateEmacs 
   echo ">>> Update neovim packages"
