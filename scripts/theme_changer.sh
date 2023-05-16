@@ -29,7 +29,7 @@ polybarThemeSwitch(){
       sed -i "s|^border-color.*|border-color = #7aa2f7|g" $config_file
       ;;
   esac
-  kilall launch.sh
+  killall launch.sh
   $HOME/.config/polybar/launch.sh &
 }
 wallpaperThemeSwitch(){
