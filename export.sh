@@ -2,9 +2,10 @@
 # ZSHRC config
 export TERM=xterm-256color
 
+export EDITOR="/usr/bin/nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 export GPG_TTY="$TTY"
-export PNPM_HOME="/home/jose/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export HISTIGNORE='*sudo -S*'
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_PLUGINS='/usr/local/Cellar'
@@ -16,6 +17,7 @@ export POWERLEVEL9K_INSTANT_PROMPT=quiet
 export APPS_DIR="$HOME/Documents/Apps"
 export EMACS_DIR="$HOME/.config/jose-emacs"
 export EMACS_PROFILE="jose"
+export TMUX_DIR="$HOME/.config/tmux"
 export MATLAB_DIR="$APPS_DIR/MATLAB/R2022a/bin"
 export MSAT_DIR="$APPS_DIR/mathsat-5.6.5-linux-x86_64"
 export GITHUB_ACCOUNT_URL="git@github.com:typesAreSpaces"
@@ -28,7 +30,7 @@ export PHD_SOFTWARE_DIR="$PHD_THESIS_DIR/Software"
 export OUTPUT_DIR="$PHD_SOFTWARE_DIR/Output"
 export PHD_DOCUMENTS="$PHD_THESIS_DIR/Documents"
 export MY_PRESENTATIONS="$PHD_DOCUMENTS/Presentations/Personal"
-export CURRENT_TA_DIR="$PHD_DOCUMENTS/Semesters/Spring/2023/TA-CS-357"
+export CURRENT_TA_DIR="$PHD_DOCUMENTS/Semesters/2023/Spring/TA-CS-357"
 export TODOLIST_DIR="$PHD_DOCUMENTS/Org-Files"
 export WRITE_UPS_DIR="$PHD_DOCUMENTS/Write-Ups"
 export REPORTS_DIR="$WRITE_UPS_DIR/weekly_reports/Spring/2022"
@@ -58,3 +60,6 @@ export PATH="$MATLAB_DIR:$PATH"
 export PATH="$APPS_DIR/csdp6.2.0linuxx86_64/bin:$PATH"
 export PATH="$GITHUB_PROJECTS_DIR/M2/M2:$PATH"
 export PATH="/usr/local/opt/cyrus-sasl/sbin:$PATH"
+export PATH="$PNPM_HOME:$PATH"
+export PATH="$ZSH_CUSTOM_PLUGINS/forgit/bin:$PATH"
+export PATH="$TMUX_DIR/scripts:$PATH"

@@ -1,3 +1,12 @@
+updateEmacs(){
+  emacsclient -s jose -a emacs -e "(auto-package-update-now-async)"
+  emacsclient -s jose -a emacs -e "(straight-pull-all)"
+  emacsclient -s jose -a emacs -e "(straight-rebuild-all)"
+}
+updateNvim(){
+  nvim --headless +TSUpdateSync +qa;
+  nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync';
+}
 updateActiveProjects(){
   for project url in ${(kv)ACTIVE_PROJECTS}; do
     echo ">>> Updating project: $project"
@@ -49,6 +58,24 @@ et(){
 }
 ec(){
   emacsclient -c -s $1 -a emacs ${@:2}
+}
+etj(){
+  emacsclient -t -s 'jose' -a emacs ${@:1}
+}
+ecj(){
+  emacsclient -c -s 'jose' -a emacs ${@:1}
+}
+etg(){
+  emacsclient -t -s 'god-layer' -a emacs ${@:1}
+}
+ecg(){
+  emacsclient -c -s 'god-layer' -a emacs ${@:1}
+}
+ecp(){
+  emacsclient -c -s $1 -a emacs -e "(persp-state-load \"$2\")" ${@:3}
+}
+ecs357(){
+  emacs --quick -l "~/Documents/GithubProjects/phd-thesis/Documents/Semesters/2023/Spring/TA-CS-357/Extra/basic_configuration/cs-357-linux.el" ${@:1}
 }
 ne(){
   emacs --with-profile=$1 --daemon &
