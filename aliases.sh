@@ -33,6 +33,7 @@ alias ej="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | tr \"\n\
 alias e357="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | tr \"\n\" \"\0\" | xargs -0 emacsclient -c -s cs357 -a emacs"
 alias nvf="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | tr \"\n\" \"\0\" | xargs -0 nvim"
 alias nvchad="NVIM_APPNAME=NvChad nvim"
+alias nvlazy="NVIM_APPNAME=LazyVim nvim"
 alias c="clear"
 alias updatetodos="$HOME/.local/scripts/updateTodoLists.sh"
 alias addref="nvim $PHD_THESIS_DIR/Documents/Write-Ups/references.bib"
