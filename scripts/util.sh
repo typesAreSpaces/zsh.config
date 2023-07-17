@@ -27,3 +27,6 @@ za(){
   zathura $1 &
 }
 
+si(){
+  sioyek $1 &
+}
