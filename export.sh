@@ -38,8 +38,8 @@ export TODOLIST_DIR="$PHD_DOCUMENTS/Org-Files"
 export WRITE_UPS_DIR="$PHD_DOCUMENTS/Write-Ups"
 export REPORTS_DIR="$WRITE_UPS_DIR/weekly_reports/Spring/2022"
 export SEMINAR="$PHD_DOCUMENTS/Seminars/BeihangUniversity-Fall2021"
-export SEMINAR_REPORTS="$SEMINAR/Reports"
-export CURRENT_REPORT='5_cabral_dimension_two'
+export SEMINAR_REPORTS="$SEMINAR/Reports/2023/constructive_simp_gen_nat_gen"
+export CURRENT_REPORT='finding_certificates_qm_univariate'
 export MATHEMATICA_PKG_DIR="$PHD_SOFTWARE_DIR/Mathematica/Packages"
 export LATEX_MACROS_DIR="$HOME/Library/texmf/tex/latex"
 # Important to use ~ instead of $HOME. This has something
@@ -69,3 +69,4 @@ export PATH="$GITHUB_PROJECTS_DIR/sdpa-gmp:$PATH"
 export PATH="$PNPM_HOME:$PATH"
 export PATH="$ZSH_CUSTOM_PLUGINS/forgit/bin:$PATH"
 export PATH="$TMUX_DIR/scripts:$PATH"
+export PATH="$PHD_DOCUMENTS/Semesters/2023/Fall/TA-CS-105/cs-105-grading/moss:$PATH"
