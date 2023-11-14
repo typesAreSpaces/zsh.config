@@ -5,7 +5,7 @@ updateEmacs(){
 }
 updateNvim(){
   nvim --headless +TSUpdateSync +qa;
-  nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync';
+  nvim --headless '+Lazy! sync' +qa
 }
 updateActiveProjects(){
   for project url in ${(kv)ACTIVE_PROJECTS}; do
