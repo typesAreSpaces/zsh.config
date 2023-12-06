@@ -1,6 +1,6 @@
 #zmodload zsh/zprof
 # ZSHRC config
-export TERM=xterm-256color
+export TERM=tmux-256color
 
 export EDITOR="/opt/homebrew/bin/nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
