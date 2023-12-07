@@ -14,6 +14,7 @@ ACTIVE_PROJECTS+=( ["$PHD_THESIS_DIR"]="$GITHUB_ACCOUNT_URL/phd-thesis" )
 ACTIVE_PROJECTS+=( ["$PHD_THESIS_DIR/Documents/Side-Projects/MaxDiff"]="$GITHUB_ACCOUNT_URL/caxd-T-_project" )
 ACTIVE_PROJECTS+=( ["$GITHUB_PROJECTS_DIR/AXDInterpolator/original"]="$GITHUB_ACCOUNT_URL/AXDInterpolator" )
 ACTIVE_PROJECTS+=( ["$GITHUB_PROJECTS_DIR/AXDInterpolator/extension"]="$GITHUB_ACCOUNT_URL/AXDInterpolator" )
+ACTIVE_PROJECTS+=( ["$GITHUB_PROJECTS_DIR/RealCertify"]="$GITHUB_ACCOUNT_URL/RealCertify" )
 
 LOCAL_ZSH_SCRIPTS=(\
   "$ZSH_SCRIPT_DIR/system.sh" \
@@ -35,6 +36,8 @@ for SCRIPT in ${LOCAL_ZSH_SCRIPTS[@]}; do
 done
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(zoxide init zsh)"
+eval $(thefuck --alias tf)
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
