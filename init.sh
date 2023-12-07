@@ -1,5 +1,5 @@
 eval "$(zoxide init zsh)"
-eval $(thefuck --alias)
+eval $(thefuck --alias tf)
 
 TO_SOURCE=(\
   "$ZSH/oh-my-zsh.sh" \
