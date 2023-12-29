@@ -24,3 +24,5 @@ quickGitPush(){
   git commit -m $1;
   git push
 }
+
+alias quickRestore="git diff --name-status | awk '{ system(\"git restore\ " \$2) }'"
