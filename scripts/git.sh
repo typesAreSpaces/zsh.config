@@ -25,4 +25,4 @@ quickGitPush(){
   git push
 }
 
-alias quickRestore="git diff --name-status | awk '{ system(\"git restore\ " \$2) }'"
+alias quickRestore="git diff --name-status | awk '{ system(\"git restore \" \$2) }'"
