@@ -34,7 +34,7 @@ se(){
 }
 
 pwdclip(){ 
-  pwd | awk '{gsub( " ","\\ " ); print}' | xclip -selection c 
+  pwd | awk '{gsub( " ","\\ " ); print}' | pbcopy
 }
 
 cdclip(){ 
