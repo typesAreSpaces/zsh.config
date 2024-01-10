@@ -44,6 +44,7 @@ alias singular="Singular"
 alias mozilla="firefox"
 alias printd="quick_attachment.py 249wdmk85qktm@hpeprint.com "
 alias s="sxiv"
+alias sftp="with-readline sftp"
 #alias tlmgr="/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode"
 
 # Docker aliases
