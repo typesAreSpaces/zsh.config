@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-POWERLEVEL10K_DIR="/opt/homebrew/opt/powerlevel10k"
+POWERLEVEL10K_DIR="/opt/homebrew/share/powerlevel10k"
 
 [[ -f "$POWERLEVEL10K_DIR/powerlevel10k.zsh-theme" ]] \
   && source "$POWERLEVEL10K_DIR/powerlevel10k.zsh-theme"
