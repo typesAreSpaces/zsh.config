@@ -1,3 +1,5 @@
+unset zle_bracketed_paste
+
 TO_SOURCE=(\
   "$ZSH/oh-my-zsh.sh" \
   "$HOME/.fzf.zsh" \
