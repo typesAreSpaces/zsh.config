@@ -56,7 +56,7 @@ et(){
   emacsclient -t -s $1 -a emacs ${@:2}
 }
 ec(){
-  emacsclient -n -e "(> (length (frame-list)) 1)" | grep -q t
+  emacsclient -s $1 -n -e "(> (length (frame-list)) 1)" | grep -q t
   if [ "$?" = "1" ]; then
     emacsclient -c -s $1 -a emacs ${@:2}
   else
