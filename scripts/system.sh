@@ -73,25 +73,18 @@ et(){
   emacsclient -t -s $1 -a emacs ${@:2}
 }
 ec(){
-  emacsclient -c -s $1 -a emacs ${@:2}
+  emacsclient -n -e "(> (length (frame-list)) 1)" | grep -q t
+  if [ "$?" = "1" ]; then
+    emacsclient -c -s $1 -a emacs ${@:2}
+  else
+    emacsclient $3 -s $1 -a emacs ${@:2}
+  fi
 }
 etj(){
-  emacsclient -t -s 'jose' -a emacs ${@:1}
+  ej 'jose' $1
 }
 ecj(){
-  emacsclient -c -s 'jose' -a emacs ${@:1}
-}
-etg(){
-  emacsclient -t -s 'god-layer' -a emacs ${@:1}
-}
-ecg(){
-  emacsclient -c -s 'god-layer' -a emacs ${@:1}
-}
-ecp(){
-  emacsclient -c -s $1 -a emacs -e "(persp-state-load \"$2\")" ${@:3}
-}
-ecs357(){
-  emacs --quick -l "~/Documents/GithubProjects/phd-thesis/Documents/Semesters/2023/Spring/TA-CS-357/Extra/basic_configuration/cs-357-linux.el" ${@:1}
+  ec 'jose' $1 $2
 }
 ne(){
   emacs --with-profile=$1 --daemon &
