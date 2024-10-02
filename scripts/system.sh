@@ -33,6 +33,10 @@ se(){
   du -a "$(pwd)" | awk '{ gsub (" ", "\\ ", $0); $1 = ""; print $0; }' | fzf | xargs -r open; 
 }
 
+fo(){
+  du -a "$(pwd)" | awk '{ gsub (" ", "\\ ", $0); $1 = ""; print $0; }' | xargs -I {} echo {} | fzf --print0 | xargs -0 -o $1
+}
+
 pwdclip(){ 
   pwd | awk '{gsub( " ","\\ " ); print}' | pbcopy
 }
