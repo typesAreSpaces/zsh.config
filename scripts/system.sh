@@ -83,3 +83,8 @@ re(){
   ke $1
   ne $1
 }
+
+unzip1(){
+  file="$1"
+  unzip "$file" -d "$(basename "$file" .zip)"
+}

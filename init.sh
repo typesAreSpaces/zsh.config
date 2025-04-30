@@ -4,7 +4,7 @@ TO_SOURCE=(\
   "$ZSH/oh-my-zsh.sh" \
   "$HOME/.fzf.zsh" \
   "$ZSH_PLUGINS/zsh-syntax-highlighting/0.8.0/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" \
-  "$ZSH_PLUGINS/zsh-autosuggestions/0.7.0/share/zsh-autosuggestions/zsh-autosuggestions.zsh" \
+  "$ZSH_PLUGINS/zsh-autosuggestions/0.7.1/share/zsh-autosuggestions/zsh-autosuggestions.zsh" \
   "$ZSH_CUSTOM_PLUGINS/fzf-tab/fzf-tab.plugin.zsh" \
 )
 declare -A ACTIVE_PROJECTS

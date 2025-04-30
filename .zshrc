@@ -11,3 +11,5 @@ source $HOME/.config/zsh/init.sh
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
