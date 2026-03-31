@@ -88,3 +88,62 @@ unzip1(){
   file="$1"
   unzip "$file" -d "$(basename "$file" .zip)"
 }
+
+mydiff(){
+  diff -u "$1" "$2" | ydiff -s   
+}
+
+#justdir(){
+  #REPO_PATH="$(git rev-parse --show-toplevel)"
+  #INPUT="$REPO_PATH/$1"
+  #if [ -d "$INPUT" ]; then
+    #echo "$INPUT"
+  #elif [ -f "$INPUT" ]; then
+    #dirname "$INPUT"
+  #fi
+#}
+
+#gitmove(){
+  #cd "$(justdir "$(git status --porcelain | fzf | awk '{ print $2 }')")"
+#}
+
+gitdir() {
+  # Ensure we are in a git repo
+  local repo_path
+  repo_path="$(git rev-parse --show-toplevel 2>/dev/null)" || return 1
+
+  local input="$repo_path/$1"
+
+  if [[ -d "$input" ]]; then
+    printf '%s\n' "$input"
+  elif [[ -f "$input" ]]; then
+    dirname -- "$input"
+  fi
+}
+
+gitmove() {
+  # Ensure fzf selection works and handle cancel case
+  local selected
+  selected="$(git status --porcelain | fzf | awk '{ print $2 }')" || return 1
+  [[ -z "$selected" ]] && return 1
+
+  local dest
+  dest="$(gitdir "$selected")" || return 1
+
+  cd "$dest" || return 1
+}
+
+gitedit() {
+  # Ensure fzf selection works and handle cancel case
+  local selected
+  selected="$(git status --porcelain | fzf | awk '{ print $2 }')" || return 1
+  [[ -z "$selected" ]] && return 1
+
+  local repo_path
+  repo_path="$(git rev-parse --show-toplevel 2>/dev/null)" || return 1
+
+  #local input="$2 $repo_path/$selected"
+  local input="$repo_path/$selected"
+
+  "$1" "$input" || return 1
+}

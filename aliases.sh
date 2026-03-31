@@ -6,20 +6,8 @@ alias dict='sdcv'
 # Directory aliases
 alias second_home="cd /media"
 alias phd="cd $PHD_THESIS_DIR"
-alias papers_for_thesis="cd $PHD_THESIS_DIR/Documents/Papers"
-alias extra="cd $PHD_THESIS_DIR/Documents/Side-Projects/kapur-talks/mpi21"
-alias reports="cd $SEMINAR_REPORTS/2023"
-alias ta1="cd $CURRENT_TA1_DIR"
-alias ta2="cd $CURRENT_TA2_DIR"
-alias thesis="cd $WRITE_UPS_DIR/thesis"
-alias personal_notes="cd $WRITE_UPS_DIR/personal_notes"
 alias seminar="cd $SEMINAR"
-alias report="cd $SEMINAR_REPORTS"
 alias website="cd $WEBSITE_DIR"
-alias scc="cd $PHD_THESIS_DIR/Documents/Side-Projects/kapur-nsf-proposal"
-alias maxdiff="cd $PHD_THESIS_DIR/Documents/Side-Projects/MaxDiff"
-alias axdint="cd $GITHUB_PROJECTS_DIR/AXDInterpolator/original"
-alias caxdint="cd $GITHUB_PROJECTS_DIR/AXDInterpolator/extension"
 
 # Program aliases
 alias python=/usr/bin/python3
@@ -35,11 +23,9 @@ alias nvchad="NVIM_APPNAME=NvChad nvim"
 alias nvlazy="NVIM_APPNAME=LazyVim nvim"
 alias c="clear"
 alias updatetodos="$HOME/.local/scripts/updateTodoLists.sh"
-alias addref="nvim $PHD_THESIS_DIR/Documents/Write-Ups/references.bib"
 alias smtinterpol="java -jar $APPS_DIR/smtinterpol-2.5-663-gf15aa217.jar"
 alias qcu="quickConfigUpdate"
 alias tksr="tmux kill-server"
-alias spass="SPASS"
 alias singular="Singular"
 alias mozilla="firefox"
 alias printd="quick_attachment.py 249wdmk85qktm@hpeprint.com "
@@ -47,9 +33,12 @@ alias s="sxiv"
 alias sftp="with-readline sftp"
 alias tlmgr="/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode"
 alias lg="lazygit"
-
-# Docker aliases
-alias seahorn="systemctl start docker && sudo docker run -v $(pwd):/host -it seahorn/seahorn-llvm5"
+alias makec="make clean"
+alias gm="gitmove"
+alias gn="gitedit nvim"
+alias ge="gitedit ecj"
+alias adobe="open -a /Applications/Adobe\ Acrobat\ DC/Adobe\ Acrobat.app/Contents/MacOS/AdobeAcrobat"
+alias skim="open -a /Applications/Skim.app/Contents/MacOS/Skim"
 
 # Theme changer aliases
 alias bspwmGruvbox="changeTheme bspwm gruvbox"
