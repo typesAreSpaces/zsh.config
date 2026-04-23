@@ -5,8 +5,6 @@ alias dict='sdcv'
 
 # Directory aliases
 alias second_home="cd /media"
-alias phd="cd $PHD_THESIS_DIR"
-alias seminar="cd $SEMINAR"
 alias website="cd $WEBSITE_DIR"
 
 # Program aliases
