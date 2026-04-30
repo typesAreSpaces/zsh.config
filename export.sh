@@ -17,7 +17,7 @@ export POWERLEVEL9K_INSTANT_PROMPT=quiet
 export HOMEBREW_NO_INSTALL_FROM_API=1 
 
 export APPS_DIR="$HOME/Documents/Apps"
-export EMACS_DIR="$HOME/.config/jose-emacs"
+export EMACS_DIR="$HOME/.emacs.d"
 export EMACS_PROFILE="jose"
 export TMUX_DIR="$HOME/.config/tmux"
 export MATLAB_DIR="$APPS_DIR/MATLAB/R2022a/bin"

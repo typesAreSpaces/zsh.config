@@ -54,7 +54,7 @@ installBrewPackages(){
 }
 
 e(){
-  emacs --with-profile=$1 ${@:2}
+  emacs --init-directory $1 ${@:2}
 }
 et(){
   emacsclient -t -s $1 -a emacs ${@:2}
@@ -74,14 +74,14 @@ ecj(){
   ec 'jose' $1 $2
 }
 ne(){
-  emacs --with-profile=$1 --daemon &
+  emacs --init-directory $1 --daemon=$2 &
 }
 ke(){
   emacsclient -s $1 -a emacs -e "(kill-emacs)"
 }
 re(){
-  ke $1
-  ne $1
+  ke $2
+  ne $1 $2
 }
 
 unzip1(){
