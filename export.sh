@@ -2,13 +2,13 @@
 # ZSHRC config
 export TERM=tmux-256color
 
-export EDITOR="/opt/homebrew/bin/nvim"
+export EDITOR="$(brew --prefix)/bin/nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 export GPG_TTY="$TTY"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export HISTIGNORE='*sudo -S*'
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_PLUGINS="/opt/homebrew/Cellar"
+export ZSH_PLUGINS="$(brew --prefix)/Cellar"
 export ZSH_CUSTOM_PLUGINS="$ZSH/custom/plugins"
 export DISABLE_AUTO_UPDATE=true
 export GTK_PATH='/usr/lib/gtk-2.0'
@@ -40,7 +40,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.opam/system/bin:$PATH"
 export PATH="$HOME/.opam/4.07.0/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH" 
 export PATH="$APPS_DIR:$PATH"
 export PATH="/Applications/Maple 2022:$PATH"
 export PATH="$APPS_DIR/LADR-2009-11A/bin:$PATH"
@@ -55,3 +54,4 @@ export PATH="$ZSH_CUSTOM_PLUGINS/forgit/bin:$PATH"
 export PATH="$TMUX_DIR/scripts:$PATH"
 export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
