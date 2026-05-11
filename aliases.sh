@@ -6,7 +6,8 @@ alias dict='sdcv'
 # Directory aliases
 alias second_home="cd /media"
 alias website="cd $WEBSITE_DIR"
-alias gits="cd $GITHUB_PROJECTS_DIR"
+alias dev="cd $DEV_DIR"
+alias wu="cd $WRITE_UPS_DIR"
 
 # Program aliases
 alias python=/usr/bin/python3

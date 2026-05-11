@@ -1,11 +1,3 @@
-upload_video(){
-  THUMBNAIL_PATH=$2
-  [ -z $THUMBNAIL_PATH ] && THUMBNAIL_PATH="$HOME/Pictures/thumbnail.jpg"
-  python $GITHUB_PROJECTS_DIR/VideoUploaderMachine/upload_video.py \
-    --file $1 \
-    --thumbnail $THUMBNAIL_PATH
-}
-
 removeQuotes(){
   cat $1 | tr -d '"'
 }

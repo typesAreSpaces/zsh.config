@@ -10,7 +10,7 @@ TO_SOURCE=(\
 declare -A ACTIVE_PROJECTS
 ACTIVE_PROJECTS=( )
 ACTIVE_PROJECTS+=( ["$LATEX_MACROS_DIR"]="$GITHUB_ACCOUNT_URL/PersonalLatexMacros" )
-ACTIVE_PROJECTS+=( ["$GITHUB_PROJECTS_DIR/website"]="$GITHUB_ACCOUNT_URL/website" )
+ACTIVE_PROJECTS+=( ["$DEV_DIR/website"]="$GITHUB_ACCOUNT_URL/website" )
 
 LOCAL_ZSH_SCRIPTS=(\
   "$ZSH_SCRIPT_DIR/system.sh" \
@@ -43,3 +43,5 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
+
+eval "$(rbenv init - zsh)"
