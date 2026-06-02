@@ -9,8 +9,7 @@ TO_SOURCE=(\
 )
 declare -A ACTIVE_PROJECTS
 ACTIVE_PROJECTS=( )
-ACTIVE_PROJECTS+=( ["$LATEX_MACROS_DIR"]="$GITHUB_ACCOUNT_URL/PersonalLatexMacros" )
-ACTIVE_PROJECTS+=( ["$DEV_DIR/website"]="$GITHUB_ACCOUNT_URL/website" )
+#ACTIVE_PROJECTS+=( ["$DEV_DIR/website"]="$GITHUB_ACCOUNT_URL/jcastellanosjoo.github.io" )
 
 LOCAL_ZSH_SCRIPTS=(\
   "$ZSH_SCRIPT_DIR/system.sh" \
