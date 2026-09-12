@@ -84,6 +84,10 @@ re(){
   ne $1 $2
 }
 
+rej(){
+  re $HOME/.config/jose-emacs jose
+}
+
 unzip1(){
   file="$1"
   unzip "$file" -d "$(basename "$file" .zip)"
