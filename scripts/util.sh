@@ -15,14 +15,6 @@ editSyms(){
   popd;
 }
 
-za(){
-  zathura $1 &
-}
-
-si(){
-  sioyek $1 &
-}
-
 countdown() {
     start="$(( $(date '+%s') + $1))"
     while [ $start -ge $(date +%s) ]; do

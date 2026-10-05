@@ -38,6 +38,7 @@ alias gn="gitedit nvim"
 alias ge="gitedit ecj"
 alias adobe="open -a /Applications/Adobe\ Acrobat\ DC/Adobe\ Acrobat.app/Contents/MacOS/AdobeAcrobat"
 alias skim="open -a /Applications/Skim.app/Contents/MacOS/Skim"
+alias sioyek='/Applications/sioyek.app/Contents/MacOS/sioyek'
 
 # Theme changer aliases
 alias bspwmGruvbox="changeTheme bspwm gruvbox"
