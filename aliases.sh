@@ -9,6 +9,7 @@ alias website="cd $WEBSITE_DIR"
 alias dev="cd $DEV_DIR"
 alias wu="cd $WRITE_UPS_DIR"
 alias org="cd $ORGFILES_DIR"
+alias onedrive="cd $ONE_DRIVE_DIR"
 
 # Program aliases
 alias python=/usr/bin/python3

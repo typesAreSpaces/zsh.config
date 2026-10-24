@@ -33,6 +33,7 @@ export LATEX_MACROS_DIR="$HOME/Library/texmf/tex/latex"
 export WALLPAPERS_DIR="~/Pictures/Wallpapers"
 export SCRIPT_DIR="$HOME/.local/scripts"
 export ZSH_SCRIPT_DIR="$HOME/.config/zsh/scripts"
+export ONE_DRIVE_DIR="$HOME/Library/CloudStorage/OneDrive-UniversityofNewMexico"
 
 export PATH="/usr/bin:$PATH"
 export PATH="$SCRIPT_DIR:$PATH"

@@ -13,3 +13,4 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(~/.local/scripts/sioyek-session.sh completion zsh)"
