@@ -151,3 +151,8 @@ gitedit() {
 
   "$1" "$input" || return 1
 }
+
+pdf() {
+  ~/.local/scripts/sioyek-session.sh new
+  /Applications/sioyek.app/Contents/MacOS/sioyek "$1"
+}
