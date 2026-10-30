@@ -53,8 +53,16 @@ installBrewPackages(){
   brew bundle
 }
 
+emacsInitDir(){
+  case "$1" in
+    doom) echo "$HOME/.config/emacs" ;;
+    jose) echo "$HOME/.config/jose-emacs" ;;
+    spacemacs) echo "$HOME/.config/spacemacs" ;;
+    *) echo "$1" ;;
+  esac
+}
 e(){
-  emacs --init-directory $1 ${@:2}
+  emacs --init-directory "$(emacsInitDir $1)" ${@:2}
 }
 et(){
   emacsclient -t -s $1 -a emacs ${@:2}
@@ -74,7 +82,7 @@ ecj(){
   ec 'jose' $1 $2
 }
 ne(){
-  emacs --init-directory $1 --daemon=$2 &
+  emacs --init-directory "$(emacsInitDir $1)" --daemon=$2 &
 }
 ke(){
   emacsclient -s $1 -a emacs -e "(kill-emacs)"

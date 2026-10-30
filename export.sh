@@ -20,6 +20,8 @@ export HOMEBREW_NO_INSTALL_FROM_API=1
 export APPS_DIR="$HOME/Documents"
 export EMACS_DIR="$HOME/.emacs.d"
 export EMACS_PROFILE="jose"
+# Otherwise XDG_CONFIG_HOME makes Spacemacs treat its own install as the dotdir.
+export SPACEMACSDIR="$HOME/.spacemacs.d"
 export TMUX_DIR="$HOME/.config/tmux"
 export MATLAB_DIR="$APPS_DIR/MATLAB/R2022a/bin"
 export GITHUB_ACCOUNT="git@github.com:typesAreSpaces"
