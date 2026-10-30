@@ -1,6 +1,7 @@
 #zmodload zsh/zprof
 # ZSHRC config
 export TERM=tmux-256color
+export MACOSX_DEPLOYMENT_TARGET=27.0
 
 export EDITOR="$(/opt/homebrew/bin/brew --prefix)/bin/nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
