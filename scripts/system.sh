@@ -85,7 +85,8 @@ re(){
 }
 
 rej(){
-  re $HOME/.config/jose-emacs jose
+  # Start a new Emacs workflow instead of restoring the last one.
+  EMACS_NEW_SESSION=1 re $HOME/.config/jose-emacs jose
 }
 
 unzip1(){
