@@ -17,6 +17,10 @@ quickUntrack(){
   config rm --cached $1
 }
 
+quickRemoveSubmodule(){
+  GIT_DIR=$HOME/.cfg GIT_WORK_TREE=$HOME $HOME/.local/scripts/remove_submodules.sh $1
+}
+
 # Git scripts
 
 quickGitPush(){
