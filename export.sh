@@ -40,6 +40,7 @@ export ONE_DRIVE_DIR="$HOME/Library/CloudStorage/OneDrive-UniversityofNewMexico"
 
 export PATH="/usr/bin:$PATH"
 export PATH="$SCRIPT_DIR:$PATH"
+export PATH="$SCRIPT_DIR/prompts:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.opam/system/bin:$PATH"
