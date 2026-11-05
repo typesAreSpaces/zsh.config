@@ -37,6 +37,7 @@ alias makec="make clean"
 alias gm="gitmove"
 alias gn="gitedit nvim"
 alias ge="gitedit ecj"
+alias gitopendiff="git difftool -t opendiff -y"
 alias adobe="open -a /Applications/Adobe\ Acrobat\ DC/Adobe\ Acrobat.app/Contents/MacOS/AdobeAcrobat"
 alias skim="open -a /Applications/Skim.app/Contents/MacOS/Skim"
 alias sioyek='/Applications/sioyek.app/Contents/MacOS/sioyek'
