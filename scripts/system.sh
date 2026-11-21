@@ -20,7 +20,7 @@ update(){
   echo ">>> Update local projects"
   updateActiveProjects
   echo ">>> Update software"
-  brew update && arch --arm64 brew upgrade
+  brew update && arch --arm64 brew upgrade --greedy-auto-updates
   #echo ">>> Update emacs packages"
   #updateEmacs 
   echo ">>> Update neovim packages"

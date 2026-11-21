@@ -46,3 +46,5 @@ alias sioyek='/Applications/sioyek.app/Contents/MacOS/sioyek'
 alias bspwmGruvbox="changeTheme bspwm gruvbox"
 alias bspwmNord="changeTheme bspwm nord"
 alias bspwmTokyo="changeTheme bspwm tokyo"
+
+alias lq="pdflatex -synctex=1 main.tex; bibtex main; pdflatex -synctex=1 main.tex; pdflatex -synctex=1 main.tex; pdflatex -synctex=1 main.tex;"
